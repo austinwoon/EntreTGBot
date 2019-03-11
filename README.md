@@ -1,5 +1,5 @@
 # EntreTGBot
-Telegram Bot made for an entrepreneurship module for market validation of functionalities.
+Telegram Bot made for an entrepreneurship module for market validation of functionalities. Time spent programming this bot was a total of 2 days.
 
 Key Functionalities included are:
 1) For tertiary students to ask questions regarding overseas exchange on the bot
@@ -23,19 +23,34 @@ Link to wrapper here: https://github.com/eternnoir/pyTelegramBotAPI
 
 In addition, I also needed to use Google's Spreadsheet API which can be found on Google Cloud Platform.
 
-I used the spreadsheet API as my database for users instead of a database schema in Heroku due to time constraints (I had to get this Bot runnig in one day)
+The rationale for using the Spreadsheets API was so that admin users could access the spreadsheet and see what questions they had to answer at their convinience. 
+
+At the time of programming the Bot, I found this way the easiest for consolidating of information as my administrative users were not tech-savvy but were comfortable with Google Spreadsheets. 
+
+__Example of how admins would see information (questions) published by users__
+![Imgur](https://i.imgur.com/ZX2BCMB.png "Imgur")
+
+I used the spreadsheet API to mimic a database for users instead of a database schema in Heroku due to time constraints (I had to get this Bot running in two days time)
 
 Here is a picture of a sample "database" for my users I used in the spreadsheet:
 
 ![ss_user](https://i.imgur.com/qmRz8JN.png?2 "ss_user")  
 
+# Deployment
+
+The bots were deployed using Heroku. A webhook was set up in the bots to the Heroku url.
+
 # In-depth view of functionalities 
+
+## Basic Overview of Application Architecture (Not accurate for all use-cases, did one generic scenario for better understanding of how program works)
+
+![diagram](https://i.imgur.com/pT2XHmt.png "diagram")
 
 ## Function 1: Registering for service
 
 Upon typing the "/start" command, users will be prompted to type their email for registration purposes.
 
-Then, the Telegram Bot will access the Google Sheets API and enter the email and the unique chat id of the message
+Then, the Telegram Bot will access the Google Sheets API and enter the email and the unique chat id of the message into the users spreadsheet database.
 
 ## Function 2: Asking Questions
 
@@ -56,6 +71,18 @@ Admins can blast a message to everyone subscribed to the service.
 
 After keying in message contents, the bot will access the google sheets and loop through the user_ids to send a message to each and every user ID.
 
+## Function 5: Unsubscribing From Service
+
+Users can unsubscribe from bot with the /unsubscribe command. 
+
+The sheets api will remove the user_id by index.
+
+# Review
+
+## Things I could have done differently.
+
+1. Instead of using the Spreadsheets API to store users, I could use a database schema for each bot on my heroku app. 
+2. Do not use the Wrapper to program my telegram bot and instead call the API directly. Initially, I did call the API directly but found it too tedious to do so in the span of two days. In the future, I will write my own class to call the Telegram API.
 
 
 
