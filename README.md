@@ -26,7 +26,8 @@ In addition, I also needed to use Google's Spreadsheet API which can be found on
 I used the spreadsheet API as my database for users instead of a database schema in Heroku due to time constraints (I had to get this Bot runnig in one day)
 
 Here is a picture of a sample "database" for my users I used in the spreadsheet:
-![picture] (https://i.imgur.com/qmRz8JN.png)
+
+[[https://i.imgur.com/qmRz8JN.png]]
 
 # In-depth view of functionalities 
 
