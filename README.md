@@ -27,7 +27,7 @@ I used the spreadsheet API as my database for users instead of a database schema
 
 Here is a picture of a sample "database" for my users I used in the spreadsheet:
 
-![SpreadsheetDatabase](https://i.imgur.com/qmRz8JN.png "SpreadsheetDatabase" =200x)
+![ss_user](https://i.imgur.com/qmRz8JN.png?2 "ss_user")  
 
 # In-depth view of functionalities 
 
