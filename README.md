@@ -1,5 +1,5 @@
 # EntreTGBot
-Telegram Bot made for an entrepreneurship module for market validation of functionalities. Time spent programming this bot was a total of 2 days.
+Telegram Bot made for an entrepreneurship module for market validation of functionalities. Time spent programming this bot was a total of 2 days (20 hours).
 
 Key Functionalities included are:
 1) For tertiary students to ask questions regarding overseas exchange on the bot
@@ -7,7 +7,7 @@ Key Functionalities included are:
 3) (Admin Action) For students to blast messages to everyone subscribed to this bot service
 
 
-The final deployed bots(Deployed with Heroku) are 
+The final deployed bots(Deployed with Heroku) are: 
 @Traverse_Australia_Bot
 @Traverse_Canada_Bot
 @Traverse_Korea_Bot
@@ -89,6 +89,6 @@ This enables me to easily check for errors in individual functions of a bot when
 
 1. Instead of using the Spreadsheets API to store users, I could use a database schema for each bot on my heroku app. 
 
-2. Do not use the Wrapper to program my telegram bot and instead call the API directly. Initially, I did call the API directly but found it too tedious to do so in the span of two days. In the future, I will write my telegram bot using Object Oriented Programming in order to have cleaner and more readable code.
+2. Do not use the Wrapper to program my telegram bot and instead call the API directly. Initially, I did call the API directly but found it too tedious to do so in the span of two days. In the future, I will implement my own Telegram Bot class to ensure cleaner and more readable code. This will also give me the flexibility of implementing my own functions instead of relying purely on the Wrapper's Methods.
 
 3. Use Asynchronus Messaging for notifications (for e.g "Succesfully Sent!") such that bot does not need to wait for previous update to be completed before serving other commands. This can help speed up application processes.
